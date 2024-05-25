@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+% Layout
+\usepackage[a4paper, portrait, margin=1in]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{titling}
+\usepackage[
+    style=ieee
+]{biblatex}
+\setlength{\droptitle}{-5em}
+\addbibresource{report.bib}
+% tables
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+\newcolumntype{R}{>{\centering\arraybackslash}X}
+% Math
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\rect}{rect}
+% Captions
+\usepackage[format=plain,
+    font={small, it}, justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{bookmark}
+\usepackage{hyperref}
+\hypersetup{ colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{cleveref}
+\usepackage{parskip}
+\setlength\parindent{0pt}
+
+% Itemize & enumerate
+\usepackage{enumitem}
+
+% Numbering of sections
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\roman{subsubsection}.}
+
+% CODE Snippets
+\usepackage{minted}
+\setminted{frame=single, obeytabs=true, tabsize=4, breaklines=true, numbersep = -12pt, linenos=true, fontsize=\scriptsize}
+\usemintedstyle{vs}
+\setmintedinline{fontsize=\small}
+
+% Figures
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+
+\begin{document}
+% Titlepage
+\input{titlepage}
+
+% Table of contents
+\tableofcontents
+% List of figures
+\listoffigures
+% List of tables
+\listoftables
+
+\pagebreak
+% Body
+\section{Introduction}
+Introduce the topic here.
+
+\section{Some other Sections}
+Section content, you might want to reference prior work \cite{example}.
+
+\section{Conclusion}
+Finish it off strong.
+
+% Back matter
+\pagebreak
+\printbibliography
+
+\appendix
+\section{An Appendix Item}
+\section{Another Appendix Item}
+
+\end{document}
